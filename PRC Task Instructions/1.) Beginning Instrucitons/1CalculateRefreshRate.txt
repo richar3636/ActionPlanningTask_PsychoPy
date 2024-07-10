@@ -1,0 +1,64 @@
+' Constants to avoid "script too large to be compiled" on experiments with numerous objects
+Const cSessionProc = ebUCase_S & ebLCase_e & ebLCase_s & ebLCase_s & ebLCase_i & ebLCase_o & ebLCase_n & ebUCase_P & ebLCase_r & ebLCase_o & ebLCase_c 
+Const cErrUnableToFindSessionProc = ebUCase_U & ebLCase_n & ebLCase_a & ebLCase_b & ebLCase_l & ebLCase_e & ebSpace & ebLCase_t & ebLCase_o & ebSpace & ebLCase_f & ebLCase_i & ebLCase_n & ebLCase_d & ebSpace & ebLCase_t & ebLCase_o & ebLCase_p & ebSpace & ebUCase_S & ebLCase_e & ebLCase_s & ebLCase_s & ebLCase_i & ebLCase_o & ebLCase_n & ebUCase_P & ebLCase_r & ebLCase_o & ebLCase_c & ebSpace & ebLCase_o & ebLCase_r & ebSpace & ebLCase_s & ebLCase_t & ebLCase_a & ebLCase_r & ebLCase_t & ebLCase_i & ebLCase_n & ebLCase_g & ebSpace & ebUCase_P & ebLCase_r & ebLCase_o & ebLCase_c & ebLCase_e & ebLCase_d & ebLCase_u & ebLCase_r & ebLCase_e & ebSpace & ebLCase_o & ebLCase_b & ebLCase_j & ebLCase_e & ebLCase_c & ebLCase_t 
+Const cRecalculateRefreshRate = ebUCase_R & ebLCase_e & ebLCase_c & ebLCase_a & ebLCase_l & ebLCase_c & ebLCase_u & ebLCase_l & ebLCase_a & ebLCase_t & ebLCase_e & ebUCase_R & ebLCase_e & ebLCase_f & ebLCase_r & ebLCase_e & ebLCase_s & ebLCase_h & ebUCase_R & ebLCase_a & ebLCase_t & ebLCase_e 
+Const cRecalculateRefreshRateNotFirst = ebUCase_P & ebLCase_l & ebLCase_e & ebLCase_a & ebLCase_s & ebLCase_e & ebSpace & ebLCase_v & ebLCase_e & ebLCase_r & ebLCase_i & ebLCase_f & ebLCase_y & ebSpace & ebLCase_t & ebLCase_h & ebLCase_a & ebLCase_t & ebSpace & ebLCase_t & ebLCase_h & ebLCase_e & ebSpace & ebUCase_R & ebLCase_e & ebLCase_c & ebLCase_a & ebLCase_l & ebLCase_c & ebLCase_u & ebLCase_l & ebLCase_a & ebLCase_t & ebLCase_e & ebUCase_R & ebLCase_e & ebLCase_f & ebLCase_r & ebLCase_e & ebLCase_s & ebLCase_h & ebUCase_R & ebLCase_a & ebLCase_t & ebLCase_e & ebUCase_F & ebLCase_i & ebLCase_r & ebLCase_s & ebLCase_t & ebSpace & ebUCase_I & ebLCase_n & ebUCase_L & ebLCase_i & ebLCase_n & ebLCase_e & ebSpace & ebLCase_a & ebLCase_p & ebLCase_p & ebLCase_e & ebLCase_a & ebLCase_r & ebLCase_s & ebSpace & ebLCase_f & ebLCase_i & ebLCase_r & ebLCase_s & ebLCase_t & ebSpace & ebLCase_i & ebLCase_n & ebSpace & ebLCase_t & ebLCase_h & ebLCase_e & ebSpace & ebLCase_e & ebLCase_x & ebLCase_p & ebLCase_e & ebLCase_r & ebLCase_i & ebLCase_m & ebLCase_e & ebLCase_n & ebLCase_t & ebSpace & ebUCase_S & ebLCase_t & ebLCase_r & ebLCase_u & ebLCase_c & ebLCase_t & ebLCase_u & ebLCase_r & ebLCase_e 
+Const cFlippingRequired = ebUCase_D & ebLCase_i & ebLCase_s & ebLCase_p & ebLCase_l & ebLCase_a & ebLCase_y & ebSpace & ebLCase_r & ebLCase_e & "-" & ebLCase_d & ebLCase_e & ebLCase_t & ebLCase_e & ebLCase_c & ebLCase_t & ebSpace & ebLCase_r & ebLCase_e & ebLCase_f & ebLCase_r & ebLCase_e & ebLCase_s & ebLCase_h & ebSpace & ebLCase_r & ebLCase_a & ebLCase_t & ebLCase_e & ebSpace & ebLCase_n & ebLCase_o & ebLCase_t & ebSpace & ebLCase_s & ebLCase_u & ebLCase_p & ebLCase_p & ebLCase_o & ebLCase_r & ebLCase_t & ebLCase_e & ebLCase_d & ebSpace & ebLCase_s & ebLCase_i & ebLCase_n & ebLCase_c & ebLCase_e & ebSpace & ebUCase_D & ebLCase_i & ebLCase_s & ebLCase_p & ebLCase_l & ebLCase_a & ebLCase_y & ebUCase_D & ebLCase_e & ebLCase_v & ebLCase_i & ebLCase_c & ebLCase_e & ebDot & ebUCase_F & ebLCase_l & ebLCase_i & ebLCase_p & ebLCase_p & ebLCase_i & ebLCase_n & ebLCase_g & ebUCase_E & ebLCase_n & ebLCase_a & ebLCase_b & ebLCase_l & ebLCase_e & ebLCase_d & ebSpace & ebLCase_i & ebLCase_s & ebSpace & ebLCase_n & ebLCase_o & ebLCase_t & ebSpace & ebLCase_l & ebLCase_o & ebLCase_g & ebLCase_i & ebLCase_c & ebLCase_a & ebLCase_l & ebSpace & ebLCase_t & ebLCase_r & ebLCase_u & ebLCase_e & ebDot & ebSpace & ebSpace & ebUCase_D & ebLCase_i & ebLCase_s & ebLCase_p & ebLCase_l & ebLCase_a & ebLCase_y & ebUCase_D & ebLCase_e & ebLCase_v & ebLCase_i & ebLCase_c & ebLCase_e & ebDot & ebUCase_N & ebLCase_a & ebLCase_m & ebLCase_e & ebSpace & "=" & ebSpace 
+Const cUnableToRecalculateRefreshRate = ebUCase_U & ebLCase_n & ebLCase_a & ebLCase_b & ebLCase_l & ebLCase_e & ebSpace & ebLCase_t & ebLCase_o & ebSpace & ebLCase_r & ebLCase_e & ebLCase_c & ebLCase_a & ebLCase_l & ebLCase_c & ebLCase_u & ebLCase_l & ebLCase_a & ebLCase_t & ebLCase_e & ebSpace & ebLCase_r & ebLCase_e & ebLCase_f & ebLCase_r & ebLCase_e & ebLCase_s & ebLCase_h & ebSpace & ebLCase_r & ebLCase_a & ebLCase_t & ebLCase_e 
+Const cRefreshRateFormat = ebDigit_0 & ebDot & ebDigit_0 & ebDigit_0 & ebDigit_0 
+Const cDotRefreshRate = ebDot & ebUCase_R & ebLCase_e & ebLCase_f & ebLCase_r & ebLCase_e & ebLCase_s & ebLCase_h & ebUCase_R & ebLCase_a & ebLCase_t & ebLCase_e 
+Const cDotRefreshRateValidTime = ebDot & ebUCase_R & ebLCase_e & ebLCase_f & ebLCase_r & ebLCase_e & ebLCase_s & ebLCase_h & ebUCase_R & ebLCase_a & ebLCase_t & ebLCase_e & ebDot & ebUCase_V & ebLCase_a & ebLCase_l & ebLCase_i & ebLCase_d & ebUCase_T & ebLCase_i & ebLCase_m & ebLCase_e 
+
+
+Dim theProcedure As Procedure
+Set theProcedure = CProcedure(Rte.GetObject(cSessionProc))
+
+' In the event this error fires the main procedure is not SessionProc then the experiment author 
+' can update the value Of cSessionProc To the name Of the first Procedure In your Structure
+If theProcedure Is Nothing Then Rte.AbortExperiment -999, cErrUnableToFindSessionProc
+
+' Determine if the RecalculateRefreshRate is the first item to run in the experiment Structure
+Dim bRecalculateRefreshRateFirst As Boolean
+If theProcedure.ChildObjectCount > 0 Then
+	If theProcedure.GetChildObjectName(1) = cRecalculateRefreshRate Then bRecalculateRefreshRateFirst = True
+End If
+
+If Not bRecalculateRefreshRateFirst Then Rte.AbortExperiment -999, cRecalculateRefreshRateNotFirst
+
+' Enumerate through open display devices and determine if the refresh rate needs recalculated
+Dim nDevice As Long
+For nDevice = 1 To Rte.DeviceManager.GetDeviceCount
+
+	Dim theDisplayDevice As DisplayDevice
+	Set theDisplayDevice = CDisplayDevice(Rte.DeviceManager.GetDevice(nDevice))
+	If Not theDisplayDevice Is Nothing Then
+	
+		If theDisplayDevice.GetState() = ebStateOpen Then
+			
+			' The recalculation workaround is only supported when flipping
+			If Not theDisplayDevice.FlippingEnabled Then Rte.AbortExperiment -999, cFlippingRequired & theDisplayDevice.Name			
+	
+			' Do we need to recalculate the refresh rate?
+			If theDisplayDevice.CalculatedRefreshRate < 50 Then
+				
+				' Force the screen to paint something (must be done twice)
+				theDisplayDevice.Canvas.SetPixel 0, 0, theDisplayDevice.Canvas.GetPixel(0, 0)	
+				theDisplayDevice.Canvas.SetPixel 0, 0, theDisplayDevice.Canvas.GetPixel(0, 0)	
+				
+				' Recalculate the refresh rate
+				theDisplayDevice.CalculateRefreshRate 1000
+				
+			End If
+			
+			' Validate that we have a valid refresh rate before proceeding
+			If theDisplayDevice.CalculatedRefreshRate < 50 Then Rte.AbortExperiment -999, cUnableToRecalculateRefreshRate
+					
+			' Log the recalculated refresh rate and when so that data prior to the time can be thrown out
+			c.SetAttrib theDisplayDevice.Name & cDotRefreshRate, Format(theDisplayDevice.CalculatedRefreshRate, cRefreshRateFormat)
+			c.SetAttrib theDisplayDevice.Name & cDotRefreshRateValidTime, Clock.Read
+		
+		End If
+		
+	End If
+
+Next

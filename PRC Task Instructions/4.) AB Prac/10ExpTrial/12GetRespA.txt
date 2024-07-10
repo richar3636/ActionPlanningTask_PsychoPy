@@ -1,0 +1,49 @@
+' Calculating the different RTs for individual key presses
+nResps = StimB3.InputMasks(1).Responses.Count 
+If nResps > 0 Then 
+Set KBRespColl = StimB3.InputMasks(1).Responses 
+
+	For i = 1 To nResps 
+		c.SetAttrib "Ra3" & i, KBRespColl(i).RT 
+	Next i 
+
+	If nResps = 3 Then 
+		c.SetAttrib "Ra3InterRT2", (KBRespColl(3).RTTime - KBRespColl(1).RTTime) 
+		c.SetAttrib "Ra3InterRT3", (KBRespColl(3).RTTime - KBRespColl(2).RTTime)
+		c.SetAttrib "Ra3InterRT1", (KBRespColl(2).RTTime - KBRespColl(1).RTTime)
+	End If
+End If 
+
+'Setting overlap attribute based on choice response and stimA direction
+If c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "ff" And c.GetAttrib ("CorrectRespA") = "ftf" Then
+		c.SetAttrib "overlap", "present"	
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "kk" And c.GetAttrib ("CorrectRespA") = "ftf" Then
+		c.SetAttrib "overlap", "absent"
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "ff" And c.GetAttrib ("CorrectRespA") = "fvf" Then
+		c.SetAttrib "overlap", "present"
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "kk" And c.GetAttrib ("CorrectRespA") = "fvf" Then
+		c.SetAttrib "overlap", "absent"
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "kk" And c.GetAttrib ("CorrectRespA") = "kik" Then
+		c.SetAttrib "overlap", "present"
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "ff" And c.GetAttrib ("CorrectRespA") = "kik" Then
+		c.SetAttrib "overlap", "absent"
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "kk" And c.GetAttrib ("CorrectRespA") = "kmk" Then
+		c.SetAttrib "overlap", "present"
+	ElseIf c.GetAttrib ("BChoice") = "Free" And StimB3.RESP = "ff" And c.GetAttrib ("CorrectRespA") = "kmk" Then
+		c.SetAttrib "overlap", "absent"
+End If 
+
+
+'Setting no planning trials overlap attribute to "noplan"
+If Ra3.CRESP = "" Then
+	c.SetAttrib "overlap", "noplan"	
+
+End If
+
+
+
+
+
+
+
+

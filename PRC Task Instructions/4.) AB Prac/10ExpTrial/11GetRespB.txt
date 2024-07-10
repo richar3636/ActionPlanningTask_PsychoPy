@@ -1,0 +1,26 @@
+Dim i As Integer 
+Dim nResps As Integer 
+Dim KBRespColl As ResponseDataCollection 
+
+nResps = StimB3.InputMasks(1).Responses.Count 
+
+If nResps > 0 Then 
+	Set KBRespColl = StimB3.InputMasks(1).Responses 
+		For i = 1 To nResps 
+		c.SetAttrib "Rb3" & i, KBRespColl(i).RT 
+		Next i 
+	If nResps = 2 Then 
+		c.SetAttrib "Rb3inter", (KBRespColl(2).RTTime - KBRespColl(1).RTTime)
+	End If 
+End If
+
+'If StimB3.RESP = c.GetAttrib("CorrectRespB") Then
+'	StimB3.ACC = 1
+'	Set StimB3.CRESP = "CorrectRespB"
+'	Else If Rb3.RESP = c.GetAttrib("CorrectRespB2") Then 
+'	StimB3.ACC = 1
+'	Set StimB3.CRESP = "CorrectRespB2"
+'	Else
+'	StimB3.ACC = 0
+'	End If
+'End If
